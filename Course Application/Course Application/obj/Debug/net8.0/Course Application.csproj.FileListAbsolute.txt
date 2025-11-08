@@ -1,0 +1,23 @@
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Course Application.exe
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Course Application.deps.json
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Course Application.runtimeconfig.json
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Course Application.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Course Application.pdb
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.AssemblyInfo.cs
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.sourcelink.json
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\refint\Course Application.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.pdb
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.genruntimeconfig.cache
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\ref\Course Application.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Domain.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Repository.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Service.dll
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Service.pdb
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Domain.pdb
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\bin\Debug\net8.0\Repository.pdb
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course Application.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\C#\Course  Application\Course Application\Course Application\obj\Debug\net8.0\Course A.95CE78F9.Up2Date
