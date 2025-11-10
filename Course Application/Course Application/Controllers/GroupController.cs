@@ -18,7 +18,7 @@ namespace Course_Application.Controllers
             Console.WriteLine("╠═══════════════════════════════════════╣");
             Console.WriteLine("║ 1. Search groups by name              ║");
             Console.WriteLine("║ 2. Search groups by teacher           ║");
-            Console.WriteLine("║ 3. Search groups by room              ║");
+            Console.WriteLine("║ 3. Search groups by sssm              ║");
             Console.WriteLine("║ 3. Search groups by room              ║");
             Console.WriteLine("║ 0. Exit                               ║");
             Console.WriteLine("╚═══════════════════════════════════════╝");
