@@ -14,7 +14,7 @@ namespace Course_Application.Controllers
             Console.Title = "📘 Group Management Console";
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("╔═══════════════════════════════════════╗");
-            Console.WriteLine("║         GROUP MANAGEMENT MENU         ║");
+            Console.WriteLine("║           MANAGEMENT MENU             ║");
             Console.WriteLine("╠═══════════════════════════════════════╣");
             Console.WriteLine("║ 1. Search groups by name              ║");
             Console.WriteLine("║ 2. Search groups by teacher           ║");
