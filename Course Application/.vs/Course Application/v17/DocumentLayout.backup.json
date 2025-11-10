@@ -3,24 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\course application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|solutionrelative:course application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\course application\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|solutionrelative:course application\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\domain\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|solutionrelative:domain\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\course application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAC87B-1EB3-46BA-A327-40DFD8103BDB}|Course Application\\Course Application.csproj|solutionrelative:course application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\implementations\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\implementations\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\implementations\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\implementations\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\interfaces\\igroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\igroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\implementations\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\implementations\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\exceptions\\dataisnullexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\exceptions\\dataisnullexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\exceptions\\itemisnotvalidtypeexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\exceptions\\itemisnotvalidtypeexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\domain\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|solutionrelative:domain\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\domain\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,32 +67,8 @@
       "RelativeMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\implementations\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\implementations\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\repositories\\implementations\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\implementations\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F85E6146-FA37-4543-8534-FEFF837F2FBF}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5B9EEE9B-BDF6-4404-9174-2C5B34432184}|Service\\Service.csproj|solutionrelative:service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|c:\\users\\user\\desktop\\c#\\course  application\\course application\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C67DB411-6837-49A5-99BE-61969DC0F925}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,154 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IGroupService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IGroupService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IGroupService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IGroupService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IGroupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:24:08.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GroupRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\GroupRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Implementations\\GroupRepository.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\GroupRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Implementations\\GroupRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T11:47:27.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Implementations\\StudentRepository.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\StudentRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Implementations\\StudentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T11:47:11.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Group.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Group.cs",
-              "RelativeToolTip": "Domain\\Models\\Group.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:14:00.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Student.cs",
-              "RelativeToolTip": "Domain\\Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:14:07.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T11:08:56.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T11:32:11.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IStudentService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IStudentService.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IStudentService.cs",
               "RelativeToolTip": "Service\\Services\\Interfaces\\IStudentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T18:22:56.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:27:51.877Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GroupService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Implementations\\GroupService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Implementations\\GroupService.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Implementations\\GroupService.cs",
-              "RelativeToolTip": "Service\\Services\\Implementations\\GroupService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:24:31.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Program.cs",
-              "RelativeDocumentMoniker": "Course Application\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Program.cs*",
-              "RelativeToolTip": "Course Application\\Program.cs*",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCUAAACeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:06:58.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Implementations\\StudentService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Implementations\\StudentService.cs",
@@ -222,20 +104,157 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T18:23:10.602Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Service",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Service.csproj",
-              "RelativeDocumentMoniker": "Service\\Service.csproj",
-              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Service.csproj",
-              "RelativeToolTip": "Service\\Service.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-08T12:41:42.157Z",
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Group.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Group.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Group.cs",
+              "RelativeToolTip": "Domain\\Models\\Group.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:14:00.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GroupService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Implementations\\GroupService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Implementations\\GroupService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Implementations\\GroupService.cs",
+              "RelativeToolTip": "Service\\Services\\Implementations\\GroupService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:24:31.888Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IGroupService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IGroupService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IGroupService.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Services\\Interfaces\\IGroupService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IGroupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:24:08.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:32:11.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Implementations\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\StudentRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Implementations\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:47:11.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Program.cs",
+              "RelativeDocumentMoniker": "Course Application\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Program.cs",
+              "RelativeToolTip": "Course Application\\Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:06:58.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GroupController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Controllers\\GroupController.cs",
+              "RelativeDocumentMoniker": "Course Application\\Controllers\\GroupController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Course Application\\Controllers\\GroupController.cs",
+              "RelativeToolTip": "Course Application\\Controllers\\GroupController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwB8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:07:04.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GroupRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\GroupRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Implementations\\GroupRepository.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Repositories\\Implementations\\GroupRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Implementations\\GroupRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:47:27.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Helpers\\Helper.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\Helper.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Service\\Helpers\\Helper.cs",
+              "RelativeToolTip": "Service\\Helpers\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:22:36.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ItemIsNotValidTypeException.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Exceptions\\ItemIsNotValidTypeException.cs",
+              "RelativeDocumentMoniker": "Repository\\Exceptions\\ItemIsNotValidTypeException.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Exceptions\\ItemIsNotValidTypeException.cs",
+              "RelativeToolTip": "Repository\\Exceptions\\ItemIsNotValidTypeException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T13:55:25.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataIsNullException.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Exceptions\\DataIsNullException.cs",
+              "RelativeDocumentMoniker": "Repository\\Exceptions\\DataIsNullException.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Exceptions\\DataIsNullException.cs",
+              "RelativeToolTip": "Repository\\Exceptions\\DataIsNullException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T13:57:12.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:27:51.877Z"
             },
             {
               "$type": "Document",
@@ -248,6 +267,30 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-11-07T18:13:38.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Domain\\Models\\Student.cs",
+              "RelativeToolTip": "Domain\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:14:07.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\C#\\Course  Application\\Course Application\\Repository\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:08:56.88Z"
             }
           ]
         }

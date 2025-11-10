@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Course_Application.Controllers;
+using Domain.Models;
 using Service.Services.Implementations;
 
 namespace Course_Application
@@ -7,9 +8,25 @@ namespace Course_Application
     {
         static void Main(string[] args)
         {
+
+            Console.Title = "📘 Group Management Console";
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═══════════════════════════════════════╗");
+            Console.WriteLine("║         GROUP MANAGEMENT MENU         ║");
+            Console.WriteLine("╠═══════════════════════════════════════╣");
+            Console.WriteLine("║ 1. Search groups by name              ║");
+            Console.WriteLine("║ 2. Search groups by teacher           ║");
+            Console.WriteLine("║ 3. Search groups by room              ║");
+            Console.WriteLine("║ 0. Exit                               ║");
+            Console.WriteLine("╚═══════════════════════════════════════╝");
+            Console.ResetColor();
+
             Console.WriteLine("Select Option: ");
+            
+            GroupController groupController = new();
             GroupService groupService = new();
             StudentService studentService = new();
+
             while (true)
             {
             CreateInput: string input = Console.ReadLine();
@@ -21,30 +38,17 @@ namespace Course_Application
                     switch (number)
                     {
                         case 1:
-
-                            string name = Console.ReadLine();
-                            string teacher = Console.ReadLine();
-                            int room = Convert.ToInt32(Console.ReadLine());
-
-                            Group group = new Group
-                            {
-                                Name = name,
-                                Teacher = teacher,
-                                Room = room
-                            };
-
-                            var newGroup = groupService.Create(group);
-                            Console.WriteLine($"Group Created: Id: {newGroup.Id}, Name: {newGroup.Name}, Teacher: {newGroup.Teacher}, Room: {newGroup.Room}");
-
+                            groupController.CreateGroup();
                             break;
                         case 2:
-                            Console.WriteLine("Update Group");
+                            
+                            groupController.GetAllGroupsByName();
                             break;
                         case 3:
-                            Console.WriteLine("Get Group By Id");
+                            groupController.GetGroupById();
                             break;
                         case 4:
-                            Console.WriteLine("Get All Groups");
+                            groupController.GetAllGroupsByTeacher();
                             break;
                         case 5:
                             Console.WriteLine("Delete Group");

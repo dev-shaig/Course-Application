@@ -7,13 +7,12 @@ namespace Service.Services.Implementations
     public class GroupService : IGroupService
     {
         private GroupRepository _groupRepository;
-        public int count;
+        public static int count;
 
         public GroupService()
         {
             _groupRepository = new();
         }
-
 
         public Group Create(Group group)
         {
@@ -27,37 +26,51 @@ namespace Service.Services.Implementations
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _groupRepository.Delete(id);
         }
 
-        public List<Group> GetAll(Predicate<Group> predicate)
+        public List<Group> GetAll()
         {
-            throw new NotImplementedException();
+            List<Group> allGroups = _groupRepository.GetAll();
+            return allGroups;
         }
 
-        public Group GetAllGroupsByName(Predicate<Group> predicate)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Group GetAllGroupsByRoom(Predicate<Group> predicate)
+        public Group GetGroupById(int id)
         {
-            throw new NotImplementedException();
-        }
+            Group existData = _groupRepository.Get(x => x.Id == id);
 
-        public Group GetAllGroupsByTeacher(Predicate<Group> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Group GetById(int id)
-        {
-            throw new NotImplementedException();
+            if (existData != null)
+            {
+                return existData;
+            }
+            return null;
         }
 
         public Group Update(int id, Group group)
         {
-            throw new NotImplementedException();
+            _groupRepository.Update(id, group);
+            return group;
+        }
+
+
+        public List<Group> GetAllGroupsByName(string name)
+        {
+           List<Group> groups = _groupRepository.GetAll(g => g.Name.Trim().ToLower().StartsWith(name.Trim().ToLower()));
+            return groups;
+        }
+
+        public List<Group> GetAllGroupsByTeacher(string teacher)
+        {
+            List<Group> groups = _groupRepository.GetAll(g => g.Teacher.Trim().ToLower().StartsWith(teacher.Trim().ToLower()));
+            return groups;
+        }
+
+
+        public List<Group> GetAllGroupsByRoom(int room)
+        {
+            List<Group> groups = _groupRepository.GetAll(g => g.Room == room);
+            return groups;
         }
     }
 }

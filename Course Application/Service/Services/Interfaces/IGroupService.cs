@@ -6,11 +6,11 @@ namespace Service.Services.Interfaces
     {
         Group Create(Group group);
         Group Update(int id, Group group);
-        Group GetById(int id);
+        Group GetGroupById(int id);
         void Delete(int id);
-        Group GetAllGroupsByName(Predicate<Group> predicate);
-        Group GetAllGroupsByTeacher(Predicate<Group> predicate);
-        Group GetAllGroupsByRoom(Predicate<Group> predicate);
-        List<Group> GetAll(Predicate<Group> predicate);
+        List<Group> GetAllGroupsByName(string name);
+        List<Group> GetAllGroupsByTeacher(string teacher);
+        List<Group> GetAllGroupsByRoom(int room);
+        List<Group> GetAll();
     }
 }

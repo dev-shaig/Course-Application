@@ -1,13 +1,15 @@
 ﻿using Domain.Common;
+using Domain.Models;
 
 namespace Repository.Repositories.Interfaces
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        void Create(T entity);
-        void Update(int id, T entity);
+        T Create(T data);
+        T Update(int id, T data);
         void Delete(int id);
         T Get(Predicate<T>? predicate);
+        List<T> GetAll();
         List<T> GetAll(Predicate<T>? predicate);
     }
 }

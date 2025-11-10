@@ -7,10 +7,10 @@ namespace Service.Services.Interfaces
         Student Create(Student student);
         Student Update(int id, Student student);
         void Delete(int id);
-        Student GetById(Predicate<Student> predicate);
-        Student GetByGroupId(Predicate<Student> predicate);
-        Student GetByNameOrSurname(Predicate<Student> predicate);
-        List<Student> GetAll(Predicate<Student> predicate);
+        Student GetStudentById(int id);
+        List<Student> GetStudentsByGroupId(int id);
+        List<Student> GetByNameOrSurname(string text);
+        List<Student> GetAll();
 
     }
 }
