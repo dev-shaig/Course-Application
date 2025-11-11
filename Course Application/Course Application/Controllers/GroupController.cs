@@ -7,134 +7,273 @@ namespace Course_Application.Controllers
     public class GroupController
     {
         GroupService groupService = new();
-        private GroupService _groupService;
 
         public void ShowMenu()
         {
             Console.Title = "📘 Group Management Console";
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("╔═══════════════════════════════════════╗");
-            Console.WriteLine("║           MANAGEMENT MENU             ║");
-            Console.WriteLine("╠═══════════════════════════════════════╣");
-            Console.WriteLine("║ 1. Search groups by name              ║");
-            Console.WriteLine("║ 2. Search groups by teacher           ║");
-            Console.WriteLine("║ 3. Search groups by sssm              ║");
-            Console.WriteLine("║ 3. Search groups by room              ║");
-            Console.WriteLine("║ 0. Exit                               ║");
-            Console.WriteLine("╚═══════════════════════════════════════╝");
+            Console.WriteLine("╔════════════════════════════════════════════╗");
+            Console.WriteLine("║            GROUP MANAGEMENT MENU           ║");
+            Console.WriteLine("╠════════════════════════════════════════════╣");
+            Console.WriteLine("║ 1. Create Group                            ║");
+            Console.WriteLine("║ 2. Update Group                            ║");
+            Console.WriteLine("║ 3. Delete Group                            ║");
+            Console.WriteLine("║ 4. Search Group By Id                      ║");
+            Console.WriteLine("║ 5. Get All Groups By Teacher               ║");
+            Console.WriteLine("║ 6. Get All Groups By Room                  ║");
+            Console.WriteLine("║ 7. Get All Groups                          ║");
+            Console.WriteLine("║ 8. Search Groups By Name                   ║");
+            Console.WriteLine("║ 9. Go Back To Main Menu                     ║");
+            Console.WriteLine("╚════════════════════════════════════════════╝");
             Console.ResetColor();
         }
-
-        public void CreateGroup()
+        private bool ContainsInvalidChars(string input)
         {
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Name: ");
-            string createGrupName = Console.ReadLine();
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Teacher: ");
-            string createGroupTeacher = Console.ReadLine();
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Room: ");
-            int createGroupRoom = Convert.ToInt32(Console.ReadLine());
-
-        CreateGroup:string groupId = Console.ReadLine();
-            int groupIdNumber;
-            bool isGroupIdNumber = int.TryParse(groupId, out groupIdNumber);
-
-            if (isGroupIdNumber)
+            char[] invalidChars = { '$', '@', '*', '=', '&', '%', '#', '!', '?', '/', '\\', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            foreach (char c in invalidChars)
             {
-                Group group = new Group
+                if (input.Contains(c))
+                    return true;
+            }
+            return false;
+        }
+        public void Create()
+        {
+            string name, teacher;
+            int room;
+
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Name: ");
+                name = Console.ReadLine().Trim();
+
+                if (string.IsNullOrWhiteSpace(name))
                 {
-                    Name = createGrupName,
-                    Teacher = createGroupTeacher,
-                    Room = createGroupRoom
-                };
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name cannot be empty!");
+                    continue;
+                }
 
-                var newGroup = groupService.Create(group);
-                Console.WriteLine($"Group Created: Id: {newGroup.Id}, Name: {newGroup.Name}, Teacher: {newGroup.Teacher}, Room: {newGroup.Room}");
+                if (ContainsInvalidChars(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name contains invalid characters! Try again.");
+                    continue;
+                }
+
+                break;
             }
-            else
+
+            while (true)
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id. Please enter a valid number.");
-                goto CreateGroup;
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Teacher Name: ");
+                teacher = Console.ReadLine().Trim();
+
+                if (string.IsNullOrWhiteSpace(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name cannot be empty!");
+                    continue;
+                }
+
+                if (ContainsInvalidChars(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name contains invalid characters! Try again.");
+                    continue;
+                }
+
+                break;
             }
+
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Room Number: ");
+                if (!int.TryParse(Console.ReadLine(), out room) || room <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid room number! Must be a positive number.");
+                    continue;
+                }
+                break;
+            }
+
+            Group group = new Group
+            {
+                Name = name,
+                Teacher = teacher,
+                Room = room
+            };
+
+            var newGroup = groupService.Create(group);
+            Helper.WriteConsole(ConsoleColor.Green,
+                $"Group Created: Id: {newGroup.Id}, Name: {newGroup.Name}, Teacher: {newGroup.Teacher}, Room: {newGroup.Room}");
         }
 
         public void Update()
         {
-        UpdateGroup: string groupId = Console.ReadLine();
-            int groupIdNumber;
-            bool isGroupIdNumber = int.TryParse(groupId, out groupIdNumber);
-
-            if (isGroupIdNumber)
+            int id;
+            while (true)
             {
-
-                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Name: ");
-                string updatedGrupName = Console.ReadLine();
-                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Teacher: ");
-                string updatedGroupTeacher = Console.ReadLine();
-                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Room: ");
-                int updatedGroupRoom = Convert.ToInt32(Console.ReadLine());
-
-                Group group = new Group
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id to update: ");
+                if (!int.TryParse(Console.ReadLine(), out id) || id <= 0)
                 {
-                    Name = updatedGrupName,
-                    Teacher = updatedGroupTeacher,
-                    Room = updatedGroupRoom
-                };
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Please enter a positive number.");
+                    continue;
+                }
+                break;
+            }
 
-                var updatedGroup = groupService.Create(group);
-                Console.WriteLine($"Group Created: Id: {updatedGroup.Id}, Name: {updatedGroup.Name}, Teacher: {updatedGroup.Teacher}, Room: {updatedGroup.Room}");
+            string name, teacher;
+            int room;
+
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Group Name: ");
+                name = Console.ReadLine().Trim();
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name cannot be empty!");
+                    continue;
+                }
+                if (ContainsInvalidChars(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name contains invalid characters! Try again.");
+                    continue;
+                }
+                break;
+            }
+
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Teacher: ");
+                teacher = Console.ReadLine().Trim();
+                if (string.IsNullOrWhiteSpace(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name cannot be empty!");
+                    continue;
+                }
+                if (ContainsInvalidChars(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name contains invalid characters! Try again.");
+                    continue;
+                }
+                break;
+            }
+
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Room Number: ");
+                if (!int.TryParse(Console.ReadLine(), out room) || room <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid room number! Try again.");
+                    continue;
+                }
+                break;
+            }
+
+            Group group = new Group
+            {
+                Name = name,
+                Teacher = teacher,
+                Room = room
+            };
+
+            var updatedGroup = groupService.Update(id, group);
+            if (updatedGroup != null)
+            {
+                Helper.WriteConsole(ConsoleColor.Green,
+                    $"Group Updated: Id: {updatedGroup.Id}, Name: {updatedGroup.Name}, Teacher: {updatedGroup.Teacher}, Room: {updatedGroup.Room}");
             }
             else
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id. Please enter a valid number.");
-                goto UpdateGroup;
+                Helper.WriteConsole(ConsoleColor.Red, "Group not found or could not be updated.");
             }
         }
 
         public void Delete()
         {
-        DeleteGroup: Console.WriteLine("Enter Group Id: ");
-            string groupId = Console.ReadLine();
-            int groupIdNumber;
-            bool isGroupIdNumber = int.TryParse(groupId, out groupIdNumber);
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id to delete: ");
+                if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Try again.");
+                    continue;
+                }
 
-            if (isGroupIdNumber)
-            {
-                groupService.Delete(groupIdNumber);
-                Console.WriteLine("Group successfully deleted!");
+                groupService.Delete(id);
+                Helper.WriteConsole(ConsoleColor.Green, "Group successfully deleted!");
+                break;
             }
-            else
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id. Please enter a valid number.");
-                goto DeleteGroup;
-            }         
         }
 
         public void GetGroupById()
         {
-            Console.WriteLine("Enter Group Id: ");
-            int id = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id: ");
+                if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Try again.");
+                    continue;
+                }
 
-            var group = groupService.GetGroupById(id);
-            if (group != null)
-            {
-                Console.WriteLine($"Group Found: Id: {group.Id}, Name: {group.Name}, Teacher: {group.Teacher}, Room: {group.Room}");
-            }
-            else
-            {
-                Console.WriteLine("Group not found.");
+                var group = groupService.GetGroupById(id);
+                if (group != null)
+                {
+                    Helper.WriteConsole(ConsoleColor.Green,
+                        $"Group Found: Id: {group.Id}, Name: {group.Name}, Teacher: {group.Teacher}, Room: {group.Room}");
+                }
+                else
+                {
+                    Helper.WriteConsole(ConsoleColor.Yellow, "Group not found.");
+                }
+                break;
             }
         }
 
-        public void GetAllGroupsByName()
+        public void GetAllGroups()
         {
-            Console.Write("Enter group name: ");
-            string name = Console.ReadLine();
-
-            var groups = _groupService.GetAllGroupsByName(name);
+            var groups = groupService.GetAll();
 
             if (groups.Count == 0)
             {
-                Console.WriteLine("No groups found with this name.");
+                Helper.WriteConsole(ConsoleColor.Yellow, "No groups available.");
+                return;
+            }
+
+            Console.WriteLine("All Groups:");
+            foreach (var group in groups)
+            {
+                Console.WriteLine($"{group.Id} - {group.Name} - {group.Teacher} - {group.Room}");
+            }
+        }
+
+
+        public void GetAllGroupsByName()
+        {
+            string name;
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter group name: ");
+                name = Console.ReadLine().Trim();
+
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name cannot be empty!");
+                    continue;
+                }
+
+                if (ContainsInvalidChars(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group name contains invalid characters! Try again.");
+                    continue;
+                }
+
+                break;
+            }
+
+            var groups = groupService.GetAllGroupsByName(name);
+
+            if (groups.Count == 0)
+            {
+                Helper.WriteConsole(ConsoleColor.Yellow, "No groups found with this name.");
                 return;
             }
 
@@ -146,14 +285,32 @@ namespace Course_Application.Controllers
 
         public void GetAllGroupsByTeacher()
         {
-            Console.Write("Enter teacher name: ");
-            string teacher = Console.ReadLine();
+            string teacher;
+            while (true)
+            {
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter teacher name: ");
+                teacher = Console.ReadLine().Trim();
 
-            var groups = _groupService.GetAllGroupsByTeacher(teacher);
+                if (string.IsNullOrWhiteSpace(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name cannot be empty!");
+                    continue;
+                }
+
+                if (ContainsInvalidChars(teacher))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Teacher name contains invalid characters! Try again.");
+                    continue;
+                }
+
+                break;
+            }
+
+            var groups = groupService.GetAllGroupsByTeacher(teacher);
 
             if (groups.Count == 0)
             {
-                Console.WriteLine("No groups found for this teacher.");
+                Helper.WriteConsole(ConsoleColor.Yellow, "No groups found for this teacher.");
                 return;
             }
 
@@ -163,23 +320,32 @@ namespace Course_Application.Controllers
             }
         }
 
-        public void GetAllGroupsByRoom(int room)
+        public void GetAllGroupsByRoom()
         {
-            var groups = _groupService.GetAllGroupsByRoom(room);
-
-            if (groups.Count == 0)
+            while (true)
             {
-                Console.WriteLine("No groups found in this room.");
-                return;
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter room number: ");
+                if (!int.TryParse(Console.ReadLine(), out int room) || room <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid room number. Try again.");
+                    continue;
+                }
+
+                var groups = groupService.GetAllGroupsByRoom(room);
+
+                if (groups.Count == 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Yellow, "No groups found in this room.");
+                    return;
+                }
+
+                foreach (var group in groups)
+                    Console.WriteLine($"{group.Id} - {group.Name} - {group.Teacher} - {group.Room}");
+                break;
             }
-
-            foreach (var group in groups)
-            {
-                Console.WriteLine($"{group.Id} - {group.Name} - {group.Teacher} - {group.Room}");
-            }
-
-
-
         }
+
     }
 }
+
+

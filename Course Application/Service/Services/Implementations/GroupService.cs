@@ -7,7 +7,6 @@ namespace Service.Services.Implementations
     public class GroupService : IGroupService
     {
         private GroupRepository _groupRepository;
-        public static int count;
 
         public GroupService()
         {
@@ -16,12 +15,8 @@ namespace Service.Services.Implementations
 
         public Group Create(Group group)
         {
-            group.Id = count;
-
-            _groupRepository.Create(group);
-
-            count++;
-            return group;
+            return _groupRepository.Create(group);
+         
         }
 
         public void Delete(int id)
@@ -49,8 +44,7 @@ namespace Service.Services.Implementations
 
         public Group Update(int id, Group group)
         {
-            _groupRepository.Update(id, group);
-            return group;
+            return _groupRepository.Update(id, group);       
         }
 
 

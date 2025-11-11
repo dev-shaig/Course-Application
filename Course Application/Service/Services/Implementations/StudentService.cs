@@ -15,12 +15,7 @@ namespace Service.Services.Implementations
 
         public Student Create(Student student)
         {
-            student.Id = count;
-
-            _studentRepository.Create(student);
-
-            count++;
-            return student;
+            return _studentRepository.Create(student);
         }
 
         public void Delete(int id)
@@ -40,13 +35,13 @@ namespace Service.Services.Implementations
             return students;
         }
 
-        public List<Student> GetStudentsByGroupId(int groupId)
+        public List<Student> GetAllByGroupId(int groupId)
         {
             List<Student> students  = _studentRepository.GetAll(s => s.Group.Id == groupId);
             return students;
         }
 
-        public Student GetStudentById(int id)
+        public Student GetById(int id)
         {
            Student existData = _studentRepository.Get(x => x.Id == id);
 
@@ -59,8 +54,12 @@ namespace Service.Services.Implementations
 
         public Student Update(int id, Student student)
         {
-            _studentRepository.Update(id, student);
-            return student;
+            return _studentRepository.Update(id, student);
+        }
+        public List<Student> GetByAge(int age)
+        {
+            List<Student> students = _studentRepository.GetAll(s => s.Age == age);
+            return students;
         }
     }
 }
