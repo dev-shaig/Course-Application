@@ -262,7 +262,7 @@ namespace Course_Application.Controllers
 
             foreach (var s in students)
             {
-                Console.WriteLine($"{s.Id} - {s.Name} {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
+                Helper.WriteConsole(ConsoleColor.Green, $"{s.Id} - {s.Name} {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
             }
         }
         public void GetStudentsByNameOrSurname()
@@ -287,7 +287,7 @@ namespace Course_Application.Controllers
 
             foreach (var s in students)
             {
-                Console.WriteLine($"Id: {s.Id} - Name: {s.Name} - Surname: {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
+                Helper.WriteConsole(ConsoleColor.Green, $"Id: {s.Id} - Name: {s.Name} - Surname: {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
             }
         }
         public void GetStudentsByGroupId()
@@ -310,7 +310,7 @@ namespace Course_Application.Controllers
 
             foreach (var s in students)
             {
-                Console.WriteLine($"Id: {s.Id} - Name: {s.Name} - Surname: {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
+                Helper.WriteConsole(ConsoleColor.Green, $"Id: {s.Id} - Name: {s.Name} - Surname: {s.Surname} - Age: {s.Age} - GroupId: {s.Group.Id}");
             }
         }
         public void GetStudentsByAge()
