@@ -11,7 +11,7 @@ public class GroupRepository : IRepository<Group>
     {
         try
         {
-            if (data is null) throw new DataIsNullException("data is not found");
+            if (data is null) throw new DataIsNullException("Data not found");
 
             data.Id = _count++;
             AppDbContext<Group>.Datas.Add(data);
@@ -27,7 +27,7 @@ public class GroupRepository : IRepository<Group>
     {
         try
         {
-            if (data == null) throw new DataIsNullException("Data cannot be null");
+            if (data == null) throw new DataIsNullException("Predicate cannot be null");
             var exist = AppDbContext<Group>.Datas.Find(x => x.Id == id);
             if (exist == null) throw new DataNotFoundException("Group not found");
             exist.Name = data.Name;
@@ -38,7 +38,7 @@ public class GroupRepository : IRepository<Group>
         catch (Exception ex)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
             return null;
         }
@@ -54,7 +54,7 @@ public class GroupRepository : IRepository<Group>
         catch (Exception ex)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
         }
     }
@@ -70,7 +70,7 @@ public class GroupRepository : IRepository<Group>
         catch (Exception ex)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
             return null;
         }
@@ -84,7 +84,7 @@ public class GroupRepository : IRepository<Group>
         catch (Exception ex)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
             return new List<Group>();
         }
@@ -102,7 +102,7 @@ public class GroupRepository : IRepository<Group>
         catch (Exception ex)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+            Console.WriteLine(ex.Message);
             Console.ResetColor();
             return new List<Group>();
         }

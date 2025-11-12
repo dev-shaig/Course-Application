@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Repository.Data;
 using Service.Helpers;
 using Service.Services.Implementations;
 
@@ -7,6 +8,7 @@ namespace Course_Application.Controllers
     public class StudentController
     {
         StudentService studentService = new();
+        List<Student> studentDatas = AppDbContext<Student>.Datas;
 
         public void ShowMenu()
         {
@@ -29,7 +31,7 @@ namespace Course_Application.Controllers
         }
         private bool ContainsInvalidChars(string input)
         {
-            char[] invalidChars = { '$', '@', '*', '=', '&', '%', '#', '!', '?', '/', '\\', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] invalidChars = { '*', '"', '-', ':', ';', '[', ']', '{', '}', '(', ')', '~', '+', '^', '$', '@', '*', '=', '&', '%', '#', '!', '?', '/', '\\', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             foreach (char c in invalidChars)
             {
                 if (input.Contains(c))
@@ -111,91 +113,121 @@ namespace Course_Application.Controllers
         }
         public void Update()
         {
-        EnterId:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Student Id to update: ");
-            if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Id! Try again.");
-                goto EnterId;
-            }
 
-        EnterName:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Name: ");
-            string name = Console.ReadLine().Trim();
-
-            if (string.IsNullOrWhiteSpace(name))
+            if (studentDatas == null || studentDatas.Count == 0)
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Name cannot be empty!");
-                goto EnterName;
-            }
-            else if (ContainsInvalidChars(name))
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid characters in name!");
-                goto EnterName;
-            }
-
-        EnterSurname:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Surname: ");
-            string surname = Console.ReadLine().Trim();
-
-            if (string.IsNullOrWhiteSpace(surname))
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Surname cannot be empty!");
-                goto EnterSurname;
-            }
-            else if (ContainsInvalidChars(surname))
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid characters in surname!");
-                goto EnterSurname;
-            }
-
-        EnterAge:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Age: ");
-            if (!int.TryParse(Console.ReadLine(), out int age) || age < 6 || age > 100)
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Age! Must be between 6 and 100.");
-                goto EnterAge;
-            }
-
-        EnterGroupId:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Group Id: ");
-            if (!int.TryParse(Console.ReadLine(), out int groupId) || groupId <= 0)
-            {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id!");
-                goto EnterGroupId;
-            }
-
-            Student student = new Student
-            {
-                Name = name,
-                Surname = surname,
-                Age = age,
-                Group = new Group { Id = groupId }
-            };
-
-            var updated = studentService.Update(id, student);
-            if (updated != null)
-            {
-                Helper.WriteConsole(ConsoleColor.Green,
-                    $"Student Updated: Id: {updated.Id}, Name: {updated.Name}, Surname: {updated.Surname}, Age: {updated.Age}, GroupId: {updated.Group.Id}");
+                Helper.WriteConsole(ConsoleColor.Red, "There is Nothing to Update!");
             }
             else
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Student not found!");
+            EnterId:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Student Id to update: ");
+                if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Id! Try again.");
+                    goto EnterId;
+                }
+                var existingStudent = studentDatas.FirstOrDefault(g => g.Id == id);
+                if (existingStudent == null)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, $"No group found with Id {id}. Please enter a valid Id.");
+                    goto EnterId;
+                }
+
+            EnterName:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Name: ");
+                string name = Console.ReadLine().Trim();
+
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Name cannot be empty!");
+                    goto EnterName;
+                }
+                else if (ContainsInvalidChars(name))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid characters in name!");
+                    goto EnterName;
+                }
+
+            EnterSurname:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Surname: ");
+                string surname = Console.ReadLine().Trim();
+
+                if (string.IsNullOrWhiteSpace(surname))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Surname cannot be empty!");
+                    goto EnterSurname;
+                }
+                else if (ContainsInvalidChars(surname))
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid characters in surname!");
+                    goto EnterSurname;
+                }
+
+            EnterAge:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Age: ");
+                if (!int.TryParse(Console.ReadLine(), out int age) || age < 6 || age > 100)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Age! Must be between 6 and 100.");
+                    goto EnterAge;
+                }
+
+            EnterGroupId:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter New Group Id: ");
+                if (!int.TryParse(Console.ReadLine(), out int groupId) || groupId <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id!");
+                    goto EnterGroupId;
+                }
+
+                Student student = new Student
+                {
+                    Name = name,
+                    Surname = surname,
+                    Age = age,
+                    Group = new Group { Id = groupId }
+                };
+
+                var updated = studentService.Update(id, student);
+                if (updated != null)
+                {
+                    Helper.WriteConsole(ConsoleColor.Green,
+                        $"Student Updated: Id: {updated.Id}, Name: {updated.Name}, Surname: {updated.Surname}, Age: {updated.Age}, GroupId: {updated.Group.Id}");
+                }
+                else
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Student not found!");
+                }
             }
         }
         public void Delete()
         {
-        EnterId:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Student Id to delete: ");
-            if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+            if (studentDatas == null || studentDatas.Count == 0)
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Id! Try again.");
-                goto EnterId;
+                Helper.WriteConsole(ConsoleColor.Red, "There is Nothing to Delete!");
+            }
+            else
+            {
+            EnterId:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Student Id to delete: ");
+                if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Student Id! Try again.");
+                    goto EnterId;
+                }
+
+                var isDeleted = studentService.GetById(id);
+                if (isDeleted != null)
+                {
+                    Helper.WriteConsole(ConsoleColor.Green, "Student successfully deleted!");
+                }
+                else
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Student not found! Deletion failed.");
+                    goto EnterId;
+                }
             }
 
-            studentService.Delete(id);
-            Helper.WriteConsole(ConsoleColor.Green, "Student successfully deleted!");
         }
         public void GetStudentById()
         {

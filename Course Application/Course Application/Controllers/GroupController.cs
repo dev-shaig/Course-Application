@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Repository.Data;
 using Service.Helpers;
 using Service.Services.Implementations;
 
@@ -7,7 +8,7 @@ namespace Course_Application.Controllers
     public class GroupController
     {
         GroupService groupService = new();
-
+        List<Group> groupDatas = AppDbContext<Group>.Datas;
         public void ShowMenu()
         {
             Console.Title = "📘 Group Management Console";
@@ -29,7 +30,7 @@ namespace Course_Application.Controllers
         }
         private bool ContainsInvalidChars(string input)
         {
-            char[] invalidChars = { '$', '@', '*', '=', '&', '%', '#', '!', '?', '/', '\\', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] invalidChars = { '*', '"', '-', ':', ';', '[', ']', '{', '}', '(', ')', '~', '+', '^', '$', '@', '*', '=', '&', '%', '#', '!', '?', '/', '\\' };
             foreach (char c in invalidChars)
             {
                 if (input.Contains(c))
@@ -93,11 +94,24 @@ namespace Course_Application.Controllers
         }
         public void Update()
         {
+            if (groupDatas == null || groupDatas.Count == 0)
+            {
+                Helper.WriteConsole(ConsoleColor.Red, "There is Nothing to Update!");
+                return;
+            }
+
         EnterId:
             Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id to update: ");
             if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
             {
                 Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Please enter a positive number.");
+                goto EnterId;
+            }
+
+            var existingGroup = groupDatas.FirstOrDefault(g => g.Id == id);
+            if (existingGroup == null)
+            {
+                Helper.WriteConsole(ConsoleColor.Red, $"No group found with Id {id}. Please enter a valid Id.");
                 goto EnterId;
             }
 
@@ -157,19 +171,35 @@ namespace Course_Application.Controllers
                 Helper.WriteConsole(ConsoleColor.Red, "Group not found or could not be updated.");
             }
         }
+
         public void Delete()
         {
-        EnterId:
-            Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id to delete: ");
-            if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+            if (groupDatas == null || groupDatas.Count == 0)
             {
-                Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Try again.");
-                goto EnterId;
+                Helper.WriteConsole(ConsoleColor.Red, "There is Nothing to Delete!");
             }
-
-            groupService.Delete(id);
-            Helper.WriteConsole(ConsoleColor.Green, "Group successfully deleted!");
+            else
+            {
+            EnterId:
+                Helper.WriteConsole(ConsoleColor.Cyan, "Enter Group Id to delete: ");
+                if (!int.TryParse(Console.ReadLine(), out int id) || id <= 0)
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Invalid Group Id! Try again.");
+                    goto EnterId;
+                }
+                var isDeleted = groupService.GetGroupById(id);
+                if (isDeleted != null)
+                {
+                    Helper.WriteConsole(ConsoleColor.Green, "Group successfully deleted!");
+                }
+                else
+                {
+                    Helper.WriteConsole(ConsoleColor.Red, "Group not found! Deletion failed.");
+                    goto EnterId;
+                }
+            }
         }
+
         public void GetGroupById()
         {
         EnterId:

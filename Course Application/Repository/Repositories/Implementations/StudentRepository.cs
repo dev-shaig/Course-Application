@@ -13,12 +13,12 @@ namespace Repository.Repositories.Implementations
         {
             try
             {
-                if (data is null) throw new DataIsNullException("Data is not found");
+                if (data is null) throw new DataIsNullException("Data not found");
 
                 var existingGroup = AppDbContext<Group>.Datas.Find(g => g.Id == data.Group.Id);
 
                 if (existingGroup == null)
-                    throw new DataNotFoundException($"Group with Id {data.Group.Id} not found. Student creation failed.");
+                    throw new DataNotFoundException($"Group with Id {data.Group.Id} not found. Student creation failed. Please make sure to create a Group first.");
 
                 data.Group = existingGroup;
                 data.Id = _count;
@@ -30,7 +30,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 return null;
             }
@@ -62,7 +62,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 return null;
             }
@@ -80,7 +80,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
             }
         }
@@ -96,7 +96,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 return null;
             }
@@ -110,7 +110,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 return new List<Student>();
             }
@@ -125,7 +125,7 @@ namespace Repository.Repositories.Implementations
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{DateTime.Now} [{ex.GetType().Name}] {ex.Message}");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 return new List<Student>();
             }
